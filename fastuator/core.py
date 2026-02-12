@@ -169,9 +169,7 @@ class Fastuator:
             )
 
             for check_result in checks:
-                if isinstance(check_result, Exception) or check_result.get(
-                    "status"
-                ) != "UP":
+                if isinstance(check_result, Exception) or check_result.get("status") != "UP":
                     raise HTTPException(
                         status_code=503,
                         detail="Liveness check failed",
@@ -196,9 +194,7 @@ class Fastuator:
             )
 
             for check_result in checks:
-                if isinstance(check_result, Exception) or check_result.get(
-                    "status"
-                ) != "UP":
+                if isinstance(check_result, Exception) or check_result.get("status") != "UP":
                     raise HTTPException(
                         status_code=503,
                         detail="Readiness check failed",
@@ -220,7 +216,7 @@ class Fastuator:
 
             return {
                 "build": {
-                    "version": "0.1.0",
+                    "version": "0.0.1",
                     "python": platform.python_version(),
                 },
                 "system": {

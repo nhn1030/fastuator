@@ -30,11 +30,11 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/shgusska12/fastuator"
-Repository = "https://github.com/shgusska12/fastuator"
+Homepage = "https://github.com/nhn1030/fastuator"
+Repository = "https://github.com/nhn1030/fastuator"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/fastuator"]
+packages = ["fastuator"]
 
 [tool.hatch.build.targets.sdist]
 exclude = [

@@ -1,0 +1,56 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "fastuator"
+version = "0.1.0"
+description = "Production-ready actuator endpoints for FastAPI (health, metrics, info)"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [{name = "Noh Hyeon Nam", email = "shgusska12@gmail.com"}]
+
+dependencies = [
+    "fastapi>=0.115.0",
+    "pydantic>=2.0.0",
+    "psutil>=5.9.0",
+    "prometheus-client>=0.20.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.21.0",
+    "httpx>=0.25.0",
+    "uvicorn[standard]>=0.32.0",
+    "black>=24.0.0",
+    "ruff>=0.1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/shgusska12/fastuator"
+Repository = "https://github.com/shgusska12/fastuator"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/fastuator"]
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+    "/.venv",
+    "/.git",
+    "/__pycache__",
+    "*.pyc",
+]
+
+[tool.black]
+line-length = 100
+target-version = ["py310", "py311", "py312"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W"]
+ignore = []

@@ -1,0 +1,56 @@
+# IDE
+.idea
+.vscode
+.mypy_cache
+
+# Python
+__pycache__
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+.Python
+.pytest_cache
+.coverage*
+coverage.xml
+htmlcov
+
+# Virtual environments
+venv/
+env/
+env3.*
+.venv/
+
+# Build
+dist/
+build/
+site/
+docs_build/
+site_build/
+
+# Testing
+.cache
+test.db
+log.txt
+
+# Jupyter
+.ipynb_checkpoints
+
+# Package files
+Pipfile.lock
+docs.zip
+archive.zip
+
+# vim
+*~
+.*.sw?
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Misc
+.netlify
+.codspeed
